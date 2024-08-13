@@ -74,8 +74,10 @@
             <h2>Thông Tin Đặt Hàng</h2>
             <p><strong>Tên Sản Phẩm:</strong> Sản phẩm 1</p>
             <p><strong>Số Lượng:</strong> <input type="number" id="quantity" min="1" value="1"></p>
-            <p><strong>Thanh Toán:</strong> $10</p>
+            <p><strong>Giá:</strong> $10</p>
+            <p><strong>Số Tiền Bạn Có:</strong> <input type="number" id="userMoney" min="0" value="0"></p>
             <button id="payButton">Thanh Toán</button>
+            <p id="message"></p>
         </div>
     </div>
 
@@ -84,6 +86,8 @@
         var modal = document.getElementById("myModal");
         var btn = document.getElementById("buyButton");
         var span = document.getElementsByClassName("close")[0];
+        var payButton = document.getElementById("payButton");
+        var message = document.getElementById("message");
 
         btn.onclick = function() {
             modal.style.display = "block";
@@ -96,6 +100,20 @@
         window.onclick = function(event) {
             if (event.target == modal) {
                 modal.style.display = "none";
+            }
+        }
+
+        payButton.onclick = function() {
+            var quantity = document.getElementById("quantity").value;
+            var userMoney = document.getElementById("userMoney").value;
+            var totalCost = 10 * quantity;
+
+            if (userMoney >= totalCost) {
+                message.textContent = "Giao dịch thành công!";
+                message.style.color = "green";
+            } else {
+                message.textContent = "Số tiền không đủ!";
+                message.style.color = "red";
             }
         }
     </script>
