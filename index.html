@@ -3,9 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang Web của Tôi</title>
+    <title>Cửa Hàng Của Tôi</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Chào mừng đến với trang web của tôi!</h1>
+    <header>
+        <h1>Chào mừng đến với cửa hàng của tôi!</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Trang Chủ</a></li>
+                <li><a href="#products">Sản Phẩm</a></li>
+                <li><a href="#contact">Liên Hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h2>Giới thiệu</h2>
+            <p>Chúng tôi cung cấp các sản phẩm chất lượng cao với giá cả hợp lý.</p>
+        </section>
+        <section id="products">
+            <h2>Sản Phẩm</h2>
+            <div class="product">
+                <img src="product1.jpg" alt="Sản phẩm 1">
+                <h3>Sản phẩm 1</h3>
+                <p>Mô tả sản phẩm 1.</p>
+                <p>Giá: $10</p>
+            </div>
+            <div class="product">
+                <img src="product2.jpg" alt="Sản phẩm 2">
+                <h3>Sản phẩm 2</h3>
+                <p>Mô tả sản phẩm 2.</p>
+                <p>Giá: $20</p>
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Liên Hệ</h2>
+            <p>Địa chỉ email: contact@example.com</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Cửa Hàng Của Tôi. Tất cả quyền được bảo lưu.</p>
+    </footer>
 </body>
 </html>
